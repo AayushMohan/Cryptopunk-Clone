@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import punkLogo from "../assets/header/cryptopunk-logo.png";
+import searchIcon from "../assets/header/search.png";
 
 const Header = () => {
   return (
@@ -10,7 +11,10 @@ const Header = () => {
       </div>
 
       <div className="searchBar">
-        <div className="searchIconContainer"></div>
+        <div className="searchIconContainer">
+          <img src={searchIcon} alt="" />
+        </div>
+        <input className="searchInput" placeholder="Collection, item or user" />
       </div>
     </div>
   );
