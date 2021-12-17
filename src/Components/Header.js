@@ -8,6 +8,10 @@ const Header = () => {
       <div className="logoContainer">
         <img src={punkLogo} className="punkLogo" alt="" />
       </div>
+
+      <div className="searchBar">
+        <div className="searchIconContainer"></div>
+      </div>
     </div>
   );
 };
