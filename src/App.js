@@ -3,6 +3,7 @@ import CollectionCard from "./Components/CollectionCard";
 import Header from "./Components/Header";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Punklist from "./Components/Punklist";
 
 function App() {
   const [punkListData, setPunkListData] = useState([]);
@@ -22,12 +23,8 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <CollectionCard
-        id={0}
-        name={"Bandana Punk"}
-        traits={[{ value: 7 }]}
-        image="https://ipfs.thirdweb.com/ipfs/QmQAcLywRXMBs1YMumL29z9LEyPK3rJGcKKUAZjpYyKi6d"
-      />
+
+      <Punklist punkListData={punkListData} />
     </div>
   );
 }
