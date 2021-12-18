@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import instagramLogo from "../assets/owner/instagram.png";
 import twitterLogo from "../assets/owner/twitter.png";
 import moreIcon from "../assets/owner/more.png";
 import "./Main.css";
 
-const Main = () => {
+const Main = ({ selectedPunk, punkListData }) => {
+  const [activePunk, setActivePunk] = useState(punkListData[0]);
+
+  useEffect(() => {
+    setActivePunk(punkListData[selectedPunk]);
+  }, [punkListData, selectedPunk]);
+
   return (
     <div className="main">
       <div className="mainContent">
@@ -12,17 +18,17 @@ const Main = () => {
           <div className="punkContainer">
             <img
               className="selectedPunk"
-              src={
-                "https://ipfs.thirdweb.com/ipfs/QmQAcLywRXMBs1YMumL29z9LEyPK3rJGcKKUAZjpYyKi6d"
-              }
+              src={activePunk.image_original_url}
               alt=""
             />
           </div>
         </div>
+
         <div className="punkDetails" style={{ color: "#fff" }}>
-          <div className="title">Bandana Punk</div>
-          <span className="itemNumber">•#3</span>
+          <div className="title">{activePunk.name}</div>
+          <span className="itemNumber">•#{activePunk.token_id}</span>
         </div>
+
         <div className="owner">
           <div className="ownerImageContainer">
             <img
@@ -34,18 +40,18 @@ const Main = () => {
           </div>
           <div className="ownerDetails">
             <div className="ownerNameAndHandle">
-              <div>0x44359B0D8eB3eeF4AeFab7a452b8c9aBD276a531</div>
+              <div>{activePunk.owner.address}</div>
               <div className="ownerHandle">@punk</div>
             </div>
-          </div>
-          <div className="ownerLink">
-            <img src={instagramLogo} alt="" />
-          </div>
-          <div className="ownerLink">
-            <img src={twitterLogo} alt="" />
-          </div>
-          <div className="ownerLink">
-            <img src={moreIcon} alt="" />
+            <div className="ownerLink">
+              <img src={instagramLogo} alt="" />
+            </div>
+            <div className="ownerLink">
+              <img src={twitterLogo} alt="" />
+            </div>
+            <div className="ownerLink">
+              <img src={moreIcon} alt="" />
+            </div>
           </div>
         </div>
       </div>
