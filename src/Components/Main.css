@@ -43,7 +43,7 @@
 .itemNumber {
   color: #a1a5b0;
   font-size: 72px;
-  /* align-self: center; */
+  align-self: center;
 }
 
 .owner {
