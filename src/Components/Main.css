@@ -36,8 +36,10 @@
 }
 
 .title {
-  font-size: 96px;
+  font-size: 90px;
   font-weight: 800;
+  padding: auto;
+  top: 10px;
 }
 
 .itemNumber {
@@ -48,12 +50,20 @@
 
 .owner {
   display: flex;
+  align-items: center;
   margin: 10px 0;
-  height: 50px;
+  position: absolute;
+  right: 5px;
+  bottom: 300px;
+  padding-right: 20px;
 }
 
 .owner > div {
   margin: 0 5px;
+}
+
+.ownerNameAndHandle {
+  color: #fff;
 }
 
 .ownerImageContainer {
@@ -62,6 +72,8 @@
   border-radius: 100%;
   overflow: hidden;
   object-fit: contain;
+  position: relative;
+  right: 21.5rem;
 }
 
 .ownerImageContainer > img {
@@ -70,9 +82,8 @@
 }
 
 .ownerDetails {
-  display: flex;
-  align-items: center;
-  flex: 1;
+  position: relative;
+  right: 21rem;
 }
 
 .ownerNameHandle {
@@ -88,7 +99,7 @@
   padding: 12px;
   border-radius: 50px;
   height: 50px;
-  /* width: 50px; */
+  width: 50px;
   border: 1px solid #fff;
   margin: 0 0 0 10px;
   cursor: pointer;

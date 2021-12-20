@@ -25,8 +25,10 @@ const Main = ({ selectedPunk, punkListData }) => {
         </div>
 
         <div className="punkDetails" style={{ color: "#fff" }}>
-          <div className="title">{activePunk.name}</div>
-          <span className="itemNumber">•#{activePunk.token_id}</span>
+          <div className="title">
+            {activePunk.name}
+            <span className="itemNumber">•#{activePunk.token_id}</span>
+          </div>
         </div>
 
         <div className="owner">
@@ -43,16 +45,17 @@ const Main = ({ selectedPunk, punkListData }) => {
               <div>{activePunk.owner.address}</div>
               <div className="ownerHandle">@punk</div>
             </div>
-            <div className="ownerLink">
-              <img src={instagramLogo} alt="" />
-            </div>
-            <div className="ownerLink">
-              <img src={twitterLogo} alt="" />
-            </div>
-            <div className="ownerLink">
-              <img src={moreIcon} alt="" />
-            </div>
           </div>
+          <div className="ownerLink">
+            <img src={instagramLogo} alt="" />
+          </div>
+          <div className="ownerLink">
+            <img src={twitterLogo} alt="" />
+          </div>
+          <div className="ownerLink">
+            <img src={moreIcon} alt="" />
+          </div>
+          {/* </div> */}
         </div>
       </div>
     </div>
