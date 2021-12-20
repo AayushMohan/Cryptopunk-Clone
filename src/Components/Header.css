@@ -39,6 +39,7 @@
 .headerItems {
   display: flex;
   color: #a1a5b0;
+  cursor: pointer;
 }
 
 .headerItems > p {
@@ -62,6 +63,7 @@
   justify-content: center;
   align-items: center;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .themeSwitchContainer > img {
@@ -73,4 +75,5 @@
   padding: 15px 40px;
   border-radius: 50px;
   color: #000;
+  cursor: pointer;
 }
