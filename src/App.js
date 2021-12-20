@@ -1,5 +1,5 @@
 import "./App.css";
-import CollectionCard from "./Components/CollectionCard";
+// import CollectionCard from "./Components/CollectionCard";
 import Header from "./Components/Header";
 import { useState, useEffect } from "react";
 import axios from "axios";
